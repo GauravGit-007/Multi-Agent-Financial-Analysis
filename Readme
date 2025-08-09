@@ -1,0 +1,145 @@
+# Multi-Agent Financial Analysis Project
+
+Welcome! This project is designed to make financial, sentiment, and news analysis on Indian stocks easy and reproducible for anyone—even beginners.
+
+## 🔎 What Does It Do?
+
+This system:
+- Fetches daily stock price data for chosen companies (e.g., Reliance, TCS)
+- Gathers recent headline news for those companies
+- Analyzes news sentiment (positive/negative/neutral)
+- Merges all data, adds basic economic indicators
+- Automatically generates BUY/SELL/HOLD recommendations
+- Saves output as CSV and Excel for easy viewing
+
+***
+
+## 💡 How The Workflow Works
+
+Here’s the full pipeline in simple steps:
+
+1. **Data Fetching**  
+   - **fetch_real_data.py**: Downloads stocks, headlines, and basic economic stats.
+   - Output:  
+     `stock_prices.csv`  
+     `news_articles.csv`  
+     `economic_indicators.csv`
+
+2. **(Optional) Data Cleaning**  
+   - For custom/wide CSV formats, run:  
+     **clean_stock_data.py**, **fix_stock_format.py**  
+     Output:  
+     `stock_prices_clean.csv`
+
+3. **Data Merging**  
+   - **full_pipeline.py**: Combines all into one well-structured file.
+   - Output:  
+     `final_combined.csv`  
+     `final_combined.xlsx`
+
+4. **Recommendation Generation**  
+   - **decision_agent.py**: Reads merged file and generates simple signals based on sentiment and price trend.
+   - Output:  
+     `recommendations.csv`
+
+5. **Orchestrator Script**  
+   - **run_all_agents.py**: Runs all steps above—from fetch to recommendation—with one command.
+
+***
+
+## 🚦 How To Set Up and Run (Step-by-Step)
+
+### 1. Prerequisites
+
+- Python 3.8–3.12 installed
+- Optional: `git` if you want to clone from GitHub
+
+### 2. (Recommended) Virtual Environment
+
+Open PowerShell or Terminal and type:
+```powershell
+python -m venv .venv
+& ".venv\Scripts\Activate.ps1"
+```
+
+### 3. Install Requirements
+
+Make sure you're in your project folder with `requirements.txt`, then run:
+```powershell
+pip install -r requirements.txt
+```
+
+### 4. Run The Whole Pipeline
+
+```powershell
+python run_all_agents.py
+```
+
+This will:
+- Fetch stock/news/economic data
+- Merge everything
+- Generate recommendations
+- Print success messages and save outputs
+
+***
+
+## 📁 Key Scripts & Files
+
+| File                   | What It Does                                     |
+|------------------------|--------------------------------------------------|
+| fetch_real_data.py     | Fetches stocks/news/economics and saves CSVs     |
+| clean_stock_data.py    | (Optional) Cleans wide-format stock CSVs         |
+| fix_stock_format.py    | (Optional) Further reshapes stock data           |
+| full_pipeline.py       | Merges all data and saves Excel/CSV              |
+| decision_agent.py      | Generates BUY/SELL/HOLD signals                  |
+| run_all_agents.py      | Orchestrates all steps with one command          |
+| requirements.txt       | Lists all needed packages (yfinance, pandas, etc)|
+
+***
+
+## 📊 What Are The Outputs?
+
+After running, check your project folder for:
+- `stock_prices.csv`
+- `news_articles.csv`
+- `economic_indicators.csv`
+- `final_combined.csv`
+- `final_combined.xlsx`
+- `recommendations.csv` (main output for decision)
+
+***
+
+## 🧹 Resetting The Project
+
+Want to clean up all generated output?  
+Run:
+```powershell
+python square_one.py
+```
+*(This will delete all `.csv` and `.xlsx` output files in the folder for a fresh start.)*
+
+***
+
+## 🆘 FAQ & Troubleshooting
+
+- Missing library? Run `pip install -r requirements.txt` (in your virtual environment).
+- Error writing Excel? Add `openpyxl` to `requirements.txt` and install—then re-run.
+- Still stuck? Check your Python version, file locations, and activation steps.
+
+***
+
+## 🚀 Modifying or Extending
+
+- To analyze new tickers, edit arguments in `run_all_agents.py` or pass extra tickers to `fetch_real_data.py`.
+- Each script is commented and easy to customize.
+
+***
+
+## ❤️ Contributing
+
+Improvements, questions, and feedback are welcome!  
+Just open an issue or PR.
+
+***
+
+**Enjoy analyzing stocks—automatically and easily!**

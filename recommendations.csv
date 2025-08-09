@@ -1,0 +1,14 @@
+Date,Company,Close,Sentiment,Signal,Reason
+2025-08-01,RELIANCE.NS,1393.699951171875,,HOLD,Neutral or no strong signal
+2025-08-04,RELIANCE.NS,1411.5,,HOLD,Neutral or no strong signal
+2025-08-05,RELIANCE.NS,1391.699951171875,,HOLD,Neutral or no strong signal
+2025-08-06,RELIANCE.NS,1392.800048828125,,HOLD,Neutral or no strong signal
+2025-08-07,RELIANCE.NS,1389.4000244140625,,HOLD,Neutral or no strong signal
+2025-08-08,RELIANCE.NS,1367.800048828125,Neutral,HOLD,Neutral or no strong signal
+2025-08-01,TCS.NS,,,HOLD,Neutral or no strong signal
+2025-08-04,TCS.NS,,,HOLD,Neutral or no strong signal
+2025-08-05,TCS.NS,,,HOLD,Neutral or no strong signal
+2025-08-06,TCS.NS,,,HOLD,Neutral or no strong signal
+2025-08-07,TCS.NS,,Negative,HOLD,Neutral or no strong signal
+2025-08-08,TCS.NS,,Negative,HOLD,Neutral or no strong signal
+2025-08-08,TCS.NS,,Negative,HOLD,Neutral or no strong signal

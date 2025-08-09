@@ -1,0 +1,6 @@
+yfinance
+feedparser
+vaderSentiment
+pandas
+numpy
+openpyxl
